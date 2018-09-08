@@ -14,3 +14,7 @@ export const debounce = (f, ms) => {
     timer = setTimeout(onComplete, ms);
   };
 };
+
+export const getPercentageFromSide = (percentage, side) => (side * percentage) / 100;
+
+export const flatten = arr => arr.reduce((acc, next) => acc.concat(...next), []);

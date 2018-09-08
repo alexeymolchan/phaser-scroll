@@ -10,7 +10,7 @@ const config = {
   width: window.innerWidth,
   height: window.innerHeight,
   autoResize: true,
-  backgroundColor: '#c9c9c9',
+  backgroundColor: '#556B2F',
   resolution: window.devicePixelRatio || 1,
   scene: [
     RootScene,
@@ -28,8 +28,6 @@ loadFont()
     game = new Phaser.Game(config);
     
     window.addEventListener('resize', debounce(gameResizeHadler, 500));
-    
-    setTimeout(gameResizeHadler, 2000);
   })
   .catch(error => {
     console.error(error);
