@@ -58,6 +58,5 @@ jspm_packages/
 .env.production
 
 .idea/
-dist/
 
 package-lock.json
