@@ -1,0 +1,31 @@
+{
+  "name": "phaser-font-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server",
+    "build": "NODE_ENV=production webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "app-root-path": "^2.1.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "dependencies": {
+    "phaser": "^3.12.0",
+    "webfontloader": "^1.6.28"
+  }
+}
