@@ -30,6 +30,8 @@ class RootScene extends Phaser.Scene {
     this.listItems = this.generateListItems(listData);
     this.scrollView = new ScrollView(this, 10 + window.innerWidth / 4 + 50, 50, window.innerWidth * 0.4, window.innerHeight * 0.4);
     this.scrollView.setData(this.listItems);
+    this.fps = this.add.text(20, 30, '', {fontFamily: 'troika', color: '#c9c9c9'});
+    this.fps.setFontSize(window.innerWidth * 0.03);
     this.events.on('resize', this.resizeHandler);
   }
   
@@ -39,6 +41,7 @@ class RootScene extends Phaser.Scene {
     const progressBarHeight = 40;
     // this.progressBar.resize(progressBarWidth, progressBarHeight);
     this.scrollView.resize(window.innerWidth * 0.4, window.innerHeight * 0.4, 10 + window.innerWidth / 4 + 50, 50);
+    this.fps.setFontSize(window.innerWidth * 0.03);
   };
   
   generateListItems = data => {
@@ -88,6 +91,10 @@ class RootScene extends Phaser.Scene {
     });
     return list;
   };
+  
+  update(time, delta) {
+    this.fps.setText(Math.floor(1 / delta * 1000))
+  }
 }
 
 export default RootScene;
