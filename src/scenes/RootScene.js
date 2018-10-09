@@ -7,7 +7,7 @@ import ScrollView from '../ui/ScrollView';
 const listData = Array.from({length: 30}).map((a, i) => ({
   position: i,
   user: {
-    name: 'Alex',
+    name: 'Phaser 3.11.0',
     experience: Math.floor(Math.random() * 1000)
   }
 }));
