@@ -25,8 +25,8 @@ class RootScene extends Phaser.Scene {
   create() {
     const progressBarWidth = window.innerWidth / 4;
     const progressBarHeight = 40;
-    this.progressBar = new ProgressBar(this, 0, 333, 666, window.innerWidth / 4, 40, true);
-    this.progressBar.setPosition(10, 50);
+    // this.progressBar = new ProgressBar(this, 0, 333, 666, window.innerWidth / 4, 40, true);
+    // this.progressBar.setPosition(10, 50);
     this.listItems = this.generateListItems(listData);
     this.scrollView = new ScrollView(this, 10 + window.innerWidth / 4 + 50, 50, window.innerWidth * 0.4, window.innerHeight * 0.4);
     this.scrollView.setData(this.listItems);
@@ -37,7 +37,7 @@ class RootScene extends Phaser.Scene {
     this.cameras.resize(window.innerWidth, window.innerHeight);
     const progressBarWidth = window.innerWidth / 4;
     const progressBarHeight = 40;
-    this.progressBar.resize(progressBarWidth, progressBarHeight);
+    // this.progressBar.resize(progressBarWidth, progressBarHeight);
     this.scrollView.resize(window.innerWidth * 0.4, window.innerHeight * 0.4, 10 + window.innerWidth / 4 + 50, 50);
   };
   
