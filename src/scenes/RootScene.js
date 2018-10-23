@@ -38,7 +38,7 @@ class RootScene extends Phaser.Scene {
   resizeHandler = () => {
     this.cameras.resize(window.innerWidth, window.innerHeight);
     const progressBarWidth = window.innerWidth / 4;
-    const progressBarHeight = 40;
+    const progressBarHeight = 50;
     // this.progressBar.resize(progressBarWidth, progressBarHeight);
     this.scrollView.resize(window.innerWidth * 0.4, window.innerHeight * 0.4, 10 + window.innerWidth / 4 + 50, 50);
     this.fps.setFontSize(window.innerWidth * 0.03);
