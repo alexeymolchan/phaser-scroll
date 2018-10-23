@@ -56,7 +56,7 @@ class RootScene extends Phaser.Scene {
       const pos = `${item.position + 1}`;
       const position = this.add.text(-window.innerWidth, 0, pos, {
         fontFamily: 'troika',
-        color: '#8c8c8c',
+        color: '#c9c9c9',
         fontStyle: 'bold'
       });
       position
