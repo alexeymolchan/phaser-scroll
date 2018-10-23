@@ -10,6 +10,7 @@ class ScrollView extends Phaser.GameObjects.Container {
     this.iterationScroll = 0;
     this.data = [];
     this.inputZone = this.scene.add.zone();
+    
     this.inputZone.setInteractive({ draggable: true });
     this.maskShape = this.scene.make.graphics();
     this.setup(width, height, x, y);
@@ -18,6 +19,7 @@ class ScrollView extends Phaser.GameObjects.Container {
     this.scene.add.existing(this);
     
     this.inputZone.on('dragstart', ({ downY }) => {
+      console.log('kek');
       this.prevDragY = downY;
     });
     
@@ -55,7 +57,7 @@ class ScrollView extends Phaser.GameObjects.Container {
     this.setPosition(centerX, centerY);
     this.initialY = y + height / 2;
     this.inputZone.setSize(width, height);
-    this.inputZone.setPosition(x, y);
+    this.inputZone.setPosition(x - width / 2, y - height / 2);
     if (!this.inputZone.input) {
       this.inputZone.setInteractive({ draggable: true });
     } else {

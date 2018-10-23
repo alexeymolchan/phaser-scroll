@@ -87,6 +87,7 @@ module.exports = {
     stats: 'errors-only',
     publicPath: '/',
     historyApiFallback: true,
+    host: '0.0.0.0'
   },
   plugins: [
     new webpack.DefinePlugin({
